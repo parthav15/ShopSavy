@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Simple E-commerce</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="font-family: 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; box-sizing: border-box;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+  <div style="max-width: 800px; margin: 50px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <div style="margin-bottom: 20px; padding: 20px; background-color: #f8f8f8; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+        <img src="{% static 'IMG_4447.jpg' %}" alt="Parthav Image" style="max-width: 25%; height: auto; border-radius: 50%; margin-bottom: 10px;">
+        <h3 style="color: #333;">Parthav</h3>
+        <p style="color: #666;">Full Stack Developer</p>
+        <p style="color: #666;">Parthav brings a wealth of experience in full-stack development...</p>
+    </div>
+
+    <div style="margin-bottom: 20px; padding: 20px; background-color: #f8f8f8; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+        <img src="{% static 'sharan.jpg' %}" alt="Sharan Image" style="max-width: 25%; height: auto; border-radius: 50%; margin-bottom: 10px;">
+        <h3 style="color: #333;">Sharan</h3>
+        <p style="color: #666;">Frontend Developer</p>
+        <p style="color: #666;">Sharan's creativity and attention to detail breathe life into our user interfaces...</p>
+    </div>
+
+    <div style="margin-bottom: 20px; padding: 20px; background-color: #f8f8f8; border-radius: 8px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+        <img src="{% static 'gurpreet.jpg' %}" alt="Gurpreet Image" style="max-width: 25%; height: auto; border-radius: 50%; margin-bottom: 10px;">
+        <h3 style="color: #333;">Gurpreet</h3>
+        <p style="color: #666;">Tester</p>
+        <p style="color: #666;">Gurpreet's commitment to perfection and thorough testing methodologies...</p>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+</html>
